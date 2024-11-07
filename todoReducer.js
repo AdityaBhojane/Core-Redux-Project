@@ -1,7 +1,10 @@
-import { ADD_TODO, REMOVE_TODO, TOGGLE_TODO } from "./constants";
+import { ADD_TODO, REMOVE_TODO, TOGGLE_TODO } from "./constants.js";
 
+const initialState  = {
+    todos:[]
+}
 
-export default function todoReducer(state=initialObject, action){
+export default function todoReducer(state=initialState, action){
     if(action.type == ADD_TODO){
         return {
             ...state,
@@ -29,5 +32,7 @@ export default function todoReducer(state=initialObject, action){
                 }
             })
         }
+    }else{
+       return state
     }
 }

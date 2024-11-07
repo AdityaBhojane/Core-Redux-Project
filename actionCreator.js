@@ -1,20 +1,20 @@
-import { ADD_TODO } from "./constants";
+import { ADD_TODO } from "./constants.js";
 
-export function CreateTodo(Todo){
+export function CreateTodoActionCreator(Todo){
     return {
         type: ADD_TODO,
         payload:Todo
     }
 }
-export function RemoveTodo(Todo){
+export function RemoveTodoActionCreator(TodoId){
     return {
         type: ADD_TODO,
-        payload:Todo
+        payload:TodoId
     }
 }
-export function ToggleTodo(Todo){
+export function ToggleTodoActionCreator(TodoId){
     return {
         type: ADD_TODO,
-        payload:Todo
+        payload:TodoId
     }
 }
