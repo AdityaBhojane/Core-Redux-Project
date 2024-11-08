@@ -1,4 +1,4 @@
-import { ADD_TODO } from "./constants.js";
+import { ADD_TODO, ADD_USER } from "./constants.js";
 
 export function CreateTodoActionCreator(Todo){
     return {
@@ -16,5 +16,12 @@ export function ToggleTodoActionCreator(TodoId){
     return {
         type: ADD_TODO,
         payload:TodoId
+    }
+}
+
+export function addUserActionCreator(user){
+    return {
+        type:ADD_USER,
+        payload:user
     }
 }
